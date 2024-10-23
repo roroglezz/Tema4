@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="aco_script.js" defer></script>
+    <title>String</title>
+</head>
+<body>
+    <!-- concat -->
+    <div id="concat">
+        <h3><code>concat(string)</code></h3>
+        <div>
+            <p>El método <code>concat(string)</code> une dos o más strings:</p>
+        </div>
+        <div class="ejemplo">
+            <p>
+                Vamos a concatenar tres String, las que quieras. <strong>Recuerda añadir los espacios</strong>.
+            </p>
+            <label for="string_uno">1: </label>
+            <input type="text" name="string_uno" id="string_uno">
+            <label for="string_dos">2: </label>
+            <input type="text" name="string_dos" id="string_dos">
+            <label for="string_tres">3: </label>
+            <input type="text" name="string_tres" id="string_tres">
+            <button id="btn_concat">Concatenar</button>
+        </div>
+    </div>
+    <!-- indexOf -->
+    <div id="indexOf">
+        <h3><code>indexOf(patron, indice)</code></h3>
+        <div>
+            <p>
+                El método <code>indexOf()</code> retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no está presente.
+            </p>
+            <p>
+                Sintaxis: <code>array.indexOf("elemento a encontrar", índice por donde comenzar a buscar (opcional));</code>
+            </p>
+            <label for="string_indexOf">Escribe:</label>
+            <input type="text" name="str_indexOf" id="str_indexOf">
+            <label for="char_busqueda">Caracter a buscar:</label>
+            <input type="text" name="pos_indexOf" id="pos_indexOf">
+            <button id="btn_buscar">Buscar</button>
+        </div>
+    </div>
+    <!-- match -->
+    <div id="match">
+        <h3><code>match(expr_reg)</code></h3>
+    </div>
+</body>
+</html>
