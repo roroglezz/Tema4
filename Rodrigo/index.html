@@ -18,33 +18,54 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
         }
         h1 {
-            color: blue;
+            color: #0056b3;
             text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            margin: 10px 0;
+            margin: 15px 0;
+            position: relative;
         }
         a {
             text-decoration: none;
-            color: blue;
+            color: #0056b3;
             font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
         }
         a:hover {
-            color: blue;
+            color: #ff5733;
+            transform: translateY(-2px);
         }
         .folder {
             margin-top: 20px;
             padding-left: 20px;
+            border-left: 4px solid #0056b3;
         }
         .folder h2 {
             color: #333;
+            position: relative;
+        }
+        .folder h2::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #0056b3;
+            border-radius: 50%;
+            transform: translateY(-50%);
         }
     </style>
 </head>
@@ -72,6 +93,20 @@
         </div>
 
     </div>
+
+    <script>
+        const links = document.querySelectorAll('a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                this.style.transition = 'background-color 0.3s';
+                this.style.backgroundColor = '#d1e7dd';
+                setTimeout(() => {
+                    this.style.backgroundColor = '';
+                }, 300);
+            });
+        });
+    </script>
 
 </body>
 </html>
