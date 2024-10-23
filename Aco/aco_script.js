@@ -1,6 +1,6 @@
 // concat()
 
-document.getElementById('btn_concat').addEventListener('click', function () {
+document.getElementById('btn_concat').addEventListener('click', function() {
     // Variables
     let string_uno = document.getElementById('string_uno').value;
     let string_dos = document.getElementById('string_dos').value;;
@@ -12,3 +12,7 @@ document.getElementById('btn_concat').addEventListener('click', function () {
 });
 
 // indexOf()
+document.getElementById('btn_buscar').addEventListener('click', function() {
+    let string = document.getElementById('str_indexOf').value;
+    
+});
