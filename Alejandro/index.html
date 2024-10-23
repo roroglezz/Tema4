@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro A. - Objeto String</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background-color: aliceblue;
+        }
+        .recuadro{
+            text-align: justify;
+            border: 1.5px solid rgba(209, 213, 219, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            background: rgba(97, 135, 192, 0.15);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="recuadro">
+        <h2>Replace</h2>
+        <p id="string1">Con replace, puedes sustituir texto o palabras específicas por nuevos valores. Prueba aquí: ¡Hola, usuario!</p>
+        <input type="text" id="nombre" placeholder="Escribe aquí tu nombre">
+        <button onclick="replace()">Sustituir</button>
+    </div>
+    <script>
+        function replace(){
+            let texto = document.getElementById("string1").innerHTML; 
+            let nombreUsuario = document.getElementById("nombre");
+            document.getElementById("string1").innerHTML = string1.replace("usuario", nombreUsuario);
+        }
+    </script>
+</body>
+</html>
