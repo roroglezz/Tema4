@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substring</title>
+</head>
+<body>
+    <div class="info">
+        <h1>Método substring en JS</h1>
+        <p>El substring() método devuelve un subconjunto de un objeto String.</p>
+        <h3>Sintáxis</h3>
+        <p>substring(indice1,indice2)</p>
+    </div>
+    
+
+    <div class="ejemplo">
+        <label for="texto">Introduce una frase:</label>
+        <input type="text" id="texto">
+        <label for="texto">Introduce los índices:</label>
+        <input type="text" id="separador">
+
+        <p id="texto_substr"></p>
+
+        <button onclick="realizarSubstring()" id="boton">Realizar substring</button>
+    </div>
+
+    <style>
+        .info {
+            border: 2px solid #4CAF50;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .info h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info h3 {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        .info p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .ejemplo {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .ejemplo label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .ejemplo input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .ejemplo button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .ejemplo button:hover {
+            background-color: #45a049; 
+        }
+
+        .ejemplo p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4CAF50;
+        }
+
+    </style>
+    <script src="JS/substring.js"></script>
+</body>
+</html>
