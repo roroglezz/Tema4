@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo de Strings en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: radial-gradient(circle at top left, #4a90e2, #f5f7fa);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+            color: #333;
+            text-align: center;
+        }
+
+        .link-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            background-color: #357ab7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            margin-top: 30px;
+            max-width: 500px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabajo de Strings en JavaScript</h1>
+    <div class="link-container">
+        <a href="Rodrigo/index.html" target="_blank">Carpeta de Rodrigo</a>
+        <a href="Aco/aco_index.html" target="_blank">Carpeta de Aco</a>
+        <a href="Alejandro/index.html" target="_blank">Carpeta de Alejandro</a>
+    </div>
+
+    <div class="image-container">
+        <img src="chuleta.png" alt="Chuleta de métodos de String en JavaScript">
+    </div>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.backgroundColor = '#357ab7';
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.backgroundColor = '#4a90e2';
+            });
+        });
+    </script>
+</body>
+</html>
+
