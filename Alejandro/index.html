@@ -34,9 +34,10 @@
     </div>
     <script>
         function replace(){
-            let texto = document.getElementById("string1").innerHTML; 
-            let nombreUsuario = document.getElementById("nombre");
-            document.getElementById("string1").innerHTML = string1.replace("usuario", nombreUsuario);
+            let texto = document.getElementById("string1"); 
+            let nombreUsuario = document.getElementById("nombre").value;
+            let textoModificado = texto.textContent.replace("usuario", nombreUsuario);
+            texto.textContent = textoModificado;
         }
     </script>
 </body>
