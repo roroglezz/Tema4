@@ -8,62 +8,82 @@
     <title>String</title>
 </head>
 <body>
-    <!-- concat -->
-    <div id="concat">
-        <h3>concat(string)</h3>
-        <div>
-            <p>El método <code>concat(string)</code> une dos o más strings:</p>
-        </div>
-        <div class="ejemplo">
+    <!-- Ejemplos -->
+    <div id="contenedor_ejemplos">
+        <!-- Ejemplo String2.html -->
+        <div id="string2" class="ejemplo">
+            <h3>Ejemplo String2.html</h3>
             <p>
-                Vamos a concatenar tres String, las que quieras. <strong>Recuerda añadir los espacios (o no)</strong>.
+                El siguiente script rompe una string en dos mitades y las imprime en pantalla. Las mitades serán iguales, siempre que el string tenga un número de caracteres par. En caso contrario, no se podrá hacer la mitad exacta, pero se podrá hacer una aproximación. Para este ejemplo, se usa el método <code>slice()</code>.
             </p>
-            <label for="string_uno">1: </label>
-            <input type="text" name="string_uno" id="string_uno">
-            <label for="string_dos">2: </label>
-            <input type="text" name="string_dos" id="string_dos">
-            <label for="string_tres">3: </label>
-            <input type="text" name="string_tres" id="string_tres">
-            <button id="btn_concat">Concatenar</button>
+            <div class="ejemplo">
+                <label for="string2_uno">Escriba el string:
+                    <input type="text" name="string2_uno" id="string2_uno" min="2">
+                </label>
+                <button id="me_partieron">¡Partir!</button>
+                <a href="aco_script.js">Ir al script</a>
+                <div id="resultado" hidden>
+                    <p>Parte 1: <span id="parte1"></span></p>
+                    <p>Parte 2: <span id="parte2"></span></p>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- indexOf -->
-    <div id="indexOf">
-        <h3>indexOf(patron, indice)</h3>
-        <div>
+        <!-- concat -->
+        <div id="concat" class="ejemplo">
+            <h3>concat(string)</h3>
+            <div>
+                <p>El método <code>concat(string)</code> une dos o más strings:</p>
+            </div>
+            <div class="ejemplo">
+                <p>
+                    Vamos a concatenar tres String, las que quieras. <strong>Recuerda añadir los espacios (o no)</strong>.
+                </p>
+                <label for="string_uno">1: </label>
+                <input type="text" name="string_uno" id="string_uno">
+                <label for="string_dos">2: </label>
+                <input type="text" name="string_dos" id="string_dos">
+                <label for="string_tres">3: </label>
+                <input type="text" name="string_tres" id="string_tres">
+                <button id="btn_concat">Concatenar</button>
+                <a href="aco_script.js">Ir al script</a>
+            </div>
+        </div>
+        <!-- indexOf -->
+        <div id="indexOf" class="ejemplo">
+            <h3>indexOf(patron, indice)</h3>
             <p>
-                El método <code>indexOf()</code> retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no está presente.
-            </p>
-            <p>
-                Sintaxis: <code>array.indexOf("elemento a encontrar", índice por donde comenzar a buscar (opcional));</code>
+                El método <code>indexOf()</code> retorna el primer índice en el que se puede encontrar un elemento dado en el string, o retorna -1 si el elemento no está presente.
             </p>
             <p>
                 También existe su contraparte <code>lastIndexOf()</code> que busca en el String el último índice en el que se puede encontrar un elemento dado.
             </p>
-            <label for="string_indexOf">Escribe:</label>
-            <input type="text" name="str_indexOf" id="str_indexOf">
-            <label for="char_busqueda">Caracter a buscar:</label>
-            <input type="text" name="pos_indexOf" id="pos_indexOf">
-            <button id="btn_buscar_indexOf">Buscar indexOf()</button>
-            <button id="btn_buscar_lastIndexOf">Buscar lastIndexOf()</button>
+            <div class="ejemplo">
+                <label for="string_indexOf">Escribe:</label>
+                <input type="text" name="str_indexOf" id="str_indexOf">
+                <label for="char_busqueda">Caracter a buscar:</label>
+                <input type="text" name="pos_indexOf" id="pos_indexOf">
+                <button id="btn_buscar_indexOf">Buscar indexOf()</button>
+                <button id="btn_buscar_lastIndexOf">Buscar lastIndexOf()</button>
+                <a href="aco_script.js">Ir al script</a>
+            </div>
         </div>
-    </div>
-    <!-- match -->
-    <div id="match">
-        <h3>match(expr_reg)</h3>
-        <div>
+        <!-- match -->
+        <div id="match" class="ejemplo">
+            <h3>match(expr_reg)</h3>
             <p>
                 El método <code>match()</code> retorna un array con todos los elementos que coincidan con la expresión regular.
             </p>
-            <p>
-                Sintaxis: <code>string.match(expresión regular)</code>
-            </p>
-            <p>
-                En este ejemplo, vamos a devolver un array con todos los elementos que coincidan con la expresión regular <code>/[A-Z]/g</code> <strong>(todas las letras mayúsculas)</strong>.
-            </p>
-            <input type="text" name="str_array" id="str_array">
-            <button id="btn_str_match">Buscar</button>
+            <div class="ejemplo">
+                <p>
+                    Vamos a devolver un array con todos los elementos que coincidan con la expresión regular <code>/[A-Z]/g</code>
+                    <br><strong>(todas las letras mayúsculas)</strong>.
+                </p>
+                <input type="text" name="str_array" id="str_array">
+                <button id="btn_str_match">Buscar</button>
+                <a href="aco_script.js">Ir al script</a>
+            </div>
         </div>
     </div>
+    <a href="../index.html">Volver</a>
 </body>
 </html>

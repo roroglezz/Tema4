@@ -1,3 +1,32 @@
+// Ejemplo String2.html
+document.getElementById('me_partieron').addEventListener('click', function() {
+    // Variable
+    let string = document.getElementById('string2_uno').value;
+    let mitad = Math.floor(string.length / 2);
+
+    // Comprabación longitud
+    if (string.length <= 1) {
+        alert('El string debe tener al menos 2 caracteres');
+        document.getElementById('resultado').hidden = true;
+        return;
+    }
+
+    // Visible el div resultado
+    document.getElementById('resultado').hidden = false;
+
+    // Lógica
+    if (string.length % 2 === 0) {
+        let parte1 = string.slice(0, mitad);
+        let parte2 = string.slice(mitad);
+        document.getElementById('parte1').innerHTML = parte1;
+        document.getElementById('parte2').innerHTML = parte2;
+    } else {
+        let parte1 = string.slice(0, mitad);
+        let parte2 = string.slice(mitad);
+        document.getElementById('parte1').innerHTML = parte1;
+        document.getElementById('parte2').innerHTML = parte2;
+    }
+});
 
 // concat()
 document.getElementById('btn_concat').addEventListener('click', function() {
