@@ -30,13 +30,21 @@
         <h2>Replace</h2>
         <p id="string1">Con replace, puedes sustituir texto o palabras específicas por nuevos valores. Prueba aquí: ¡Hola, usuario!</p>
         <input type="text" id="nombre" placeholder="Escribe aquí tu nombre">
+        <input type="hidden" id="nuevoNombre">
         <button onclick="replace()">Sustituir</button>
     </div>
     <script>
         function replace(){
             let texto = document.getElementById("string1"); 
             let nombreUsuario = document.getElementById("nombre").value;
-            let textoModificado = texto.textContent.replace("usuario", nombreUsuario);
+            let nuevoNombre = document.getElementById("nuevoNombre").value;
+            let textoModificado = "";
+            if(nuevoNombre == ""){
+                textoModificado = texto.textContent.replace("usuario", nombreUsuario);
+            }else{
+                textoModificado = texto.textContent.replace(nuevoNombre, nombreUsuario);
+            }
+            document.getElementById("nuevoNombre").value = nombreUsuario;
             texto.textContent = textoModificado;
         }
     </script>
