@@ -6,7 +6,7 @@
     <title>Alejandro A. - Objeto String</title>
     <style>
         body {
-            display: flex;
+            display: grid;
             justify-content: center;
             align-items: center;
             font-family: Arial;
@@ -23,6 +23,23 @@
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
         }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
     </style>
 </head>
 <body>
@@ -33,19 +50,51 @@
         <input type="hidden" id="nuevoNombre">
         <button onclick="replace()">Sustituir</button>
     </div>
+    <div class="recuadro">
+        <h2>Search</h2>
+        <p id="string2">Con search, puedes encontrar la posición de la primera coincidencia de una palabra en una texto. Si no se encuentra coincidencia, search devuelve -1. Prueba con uno de estos colores: blanco azul amarillo</p>
+        <input type="text" id="palabraBuscada" placeholder="Escribe aquí un color">
+        <button onclick="search()">Buscar</button>
+        <p id="resultado"></p>
+    </div>
+    <div class="recuadro">
+        <h2>Slice</h2>
+        <p id="string3">Con slice, puedes establecer dos posiciones de caracteres, y devolver lo que hay entre ellos. Prueba escribiendo dos posiciones.</p>
+        <input type="text" id="primeraPosicion" placeholder="Escribe aquí la primera posición">
+        <input type="text" id="segundaPosicion" placeholder="Escribe aquí la segunda posición">
+        <button onclick="slice()">Buscar</button>
+        <p id="resultadoSlice"></p>
+    </div>
     <script>
         function replace(){
             let texto = document.getElementById("string1"); 
             let nombreUsuario = document.getElementById("nombre").value;
             let nuevoNombre = document.getElementById("nuevoNombre").value;
-            let textoModificado = "";
             if(nuevoNombre == ""){
-                textoModificado = texto.textContent.replace("usuario", nombreUsuario);
+                texto.textContent = texto.textContent.replace("usuario", nombreUsuario);
             }else{
-                textoModificado = texto.textContent.replace(nuevoNombre, nombreUsuario);
+                texto.textContent = texto.textContent.replace(nuevoNombre, nombreUsuario);
             }
             document.getElementById("nuevoNombre").value = nombreUsuario;
-            texto.textContent = textoModificado;
+        }
+
+        function search(){
+            let texto = document.getElementById("string2"); 
+            let palabraBuscada = document.getElementById("palabraBuscada").value;
+            document.getElementById("resultado").innerHTML = texto.textContent.search(palabraBuscada);
+        }
+
+        function slice(){
+            let texto = document.getElementById("string3"); 
+            let primeraPosicion = parseInt(document.getElementById("primeraPosicion").value);
+            let segundaPosicion = parseInt(document.getElementById("segundaPosicion").value);
+            if(isNaN(primeraPosicion) || isNaN(segundaPosicion)){
+                document.getElementById("resultadoSlice").innerHTML = "Los valores deben ser numéricos.";
+            }else if(primeraPosicion >= segundaPosicion){
+                document.getElementById("resultadoSlice").innerHTML = "La primera posición debe ser menor que la segunda."
+            }else{
+                document.getElementById("resultadoSlice").innerHTML = texto.textContent.slice(primeraPosicion, segundaPosicion);
+            }
         }
     </script>
 </body>
